@@ -12,11 +12,14 @@ import Spinner from '../Spinner';
 export default function BasicTable() {
     const { characters, loading } = useContext(AppContext);
 
+    console.log(characters);
+
     return (
         <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
                 <TableHead>
                     <TableRow>
+                        <TableCell>Image</TableCell>
                         <TableCell>Name</TableCell>
                         <TableCell align="right">Especie</TableCell>
                         <TableCell align="right">Genéro</TableCell>
@@ -41,6 +44,13 @@ export default function BasicTable() {
                                     },
                                 }}
                             >
+                                <TableCell align="right">
+                                    <img
+                                        src={row.image}
+                                        alt={row.name}
+                                        width={100}
+                                    />
+                                </TableCell>
                                 <TableCell component="th" scope="row">
                                     {row.name}
                                 </TableCell>
