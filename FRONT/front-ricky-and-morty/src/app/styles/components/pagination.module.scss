@@ -1,0 +1,17 @@
+@import '../base/variables';
+
+.pagination_container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    .pagination_text{
+        color: $linkPortfolioCard;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+}
